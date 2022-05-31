@@ -8,7 +8,7 @@
   justify-content: center;
   margin-bottom: 56px;
   @include tablet {
-    margin-bottom: 30px;
+    margin-bottom: var(--tipical-margin-2);
   }
 }
 .specifics-item-title {
@@ -39,11 +39,11 @@
 .specifics-item {
   margin-bottom: var(--tipical-margin-2);
   @include tablet {
-    width: calc(100% / 2 - 30px);
+    width: calc(100% / 2 - var(--tipical-margin-2));
     margin-left: var(--tipical-margin-2);
   }
   @include desktop {
-    width: calc(100% / 4 - 30px);
+    width: calc(100% / 4 - var(--tipical-margin-2));
     margin-left: var(--tipical-margin-2);
   }
 }

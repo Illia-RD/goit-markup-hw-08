@@ -6,15 +6,19 @@
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
-  margin-bottom: 50px;
+  margin-bottom: var(--tipical-margin-2);
   @include desktop {
     font-size: 36px;
+    margin-bottom: var(--tipical-margin-1);
   }
 }
 .our-team__list {
-  // display: flex;
-
+  display: flex;
+  flex-wrap: wrap;
   margin-bottom: -30px;
+  @include tablet {
+    margin-left: -30px;
+  }
 }
 .our-team__item {
   background: #ffffff;
@@ -22,13 +26,20 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   margin-bottom: var(--tipical-margin-2);
-  // &:not(:last-child) {
-  //   margin-right: var(--tipical-margin-2);
-  // }
+  @include tablet {
+    width: calc(100% / 2 - var(--tipical-margin-2));
+    margin-left: var(--tipical-margin-2);
+  }
+  @include desktop {
+    width: calc(100% / 4 - var(--tipical-margin-2));
+  }
 }
 .our-team__wrap {
-  margin-top: 30px;
+  margin-top: var(--tipical-margin-2);
   margin-bottom: 24px;
+  @include desktop {
+    margin-bottom: var(--tipical-margin-2);
+  }
 }
 .our-team__member {
   font-weight: 500;

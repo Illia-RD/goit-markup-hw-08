@@ -2,11 +2,26 @@
   background: #2f303a;
   padding: 60px 0;
 }
-footer .container {
-  display: flex;
+.footer .container {
+  text-align: center;
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @include desktop {
+    text-align: left;
+  }
 }
 .footer__text {
-  margin-right: 70px;
+  @include tablet {
+    margin-right: 165px;
+  }
+  @include desktop {
+    margin-right: 70px;
+    margin-bottom: 0;
+  }
+  margin-bottom: 60px;
 }
 .footer__adress {
   font-style: normal;
@@ -16,17 +31,8 @@ footer .container {
   letter-spacing: 0.03em;
   color: #ffffff;
   margin-top: 20px;
-  margin-bottom: 9px;
-}
-.soc__title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #ffffff;
-  margin-bottom: 20px;
-}
-.soc__wrap {
-  margin-top: 12px;
+  margin-bottom: 8px;
+  @include desktop {
+    margin-bottom: 9px;
+  }
 }

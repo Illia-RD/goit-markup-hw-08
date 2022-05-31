@@ -28,7 +28,10 @@
 .footer__text .contact {
   &__item {
     &:not(:last-child) {
-      margin-bottom: 9px;
+      margin-bottom: 8px;
+      @include desktop {
+        margin-bottom: 9px;
+      }
     }
   }
   &__link {

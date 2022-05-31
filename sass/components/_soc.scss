@@ -1,6 +1,18 @@
 .soc {
   display: flex;
 }
+.soc__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.soc__wrap {
+  margin-top: 12px;
+}
 .soc__link {
   height: 44px;
   width: 44px;
@@ -31,4 +43,13 @@
 .soc__link--light {
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer__soc {
+  justify-content: center;
+  margin-bottom: 60px;
+  @include desktop {
+    margin-right: 93px;
+    margin-bottom: 0;
+  }
 }

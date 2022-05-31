@@ -1,18 +1,32 @@
 .regular-customers-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.2;
+  font-size: 28px;
+  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
-  margin-bottom: 50px;
+  margin-bottom: var(--tipical-margin-2);
+  @include desktop {
+    font-size: 36px;
+    margin-bottom: var(--tipical-margin-1);
+  }
 }
 
 .regular-customers-list {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: -30px;
+  margin-left: -30px;
 }
-.regular-customers-item + .regular-customers-item {
-  margin-left: 30px;
+.regular-customers-item {
+  margin-left: var(--tipical-margin-2);
+  margin-bottom: var(--tipical-margin-2);
+  width: calc(100% / 2 - var(--tipical-margin-2));
+  @include tablet {
+    width: calc(100% / 3 - var(--tipical-margin-2));
+  }
+  @include desktop {
+    width: calc(100% / 6 - var(--tipical-margin-2));
+  }
 }
 
 .regular-customers-icon {
@@ -23,7 +37,7 @@
   justify-content: center;
   align-items: center;
   height: 92px;
-  width: 170px;
+  width: 100%;
   color: #afb1b8;
   border: 1px solid #afb1b8;
   box-sizing: border-box;

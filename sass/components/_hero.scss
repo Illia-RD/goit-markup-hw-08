@@ -2,27 +2,40 @@
   background-color: #2f303a;
 
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/hero-background.jpg);
+    url(../images/hero-background-mobile.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  padding: 200px 0;
-  max-width: 1600px;
+  padding: 118px 0;
+  max-width: 100%;
   margin: 0 auto;
+  @include tablet {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-background-tablet.jpg);
+  }
+  @include desktop {
+    padding: 205px 0;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero-background-desktop.jpg);
+  }
 }
 
 .hero-title {
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.5;
   text-align: center;
+  margin: 0 auto;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.6;
+  max-width: 360px;
   letter-spacing: 0.06em;
+  @include desktop {
+    max-width: 696px;
+    font-size: 44px;
+    line-height: 1.4;
+  }
+
   text-transform: uppercase;
-
   color: #ffffff;
-  max-width: 696px;
-
-  margin-left: 237px;
   margin-bottom: var(--tipical-margin-2);
 }
 .hero-btn {
