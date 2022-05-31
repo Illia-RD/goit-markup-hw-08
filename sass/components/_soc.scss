@@ -1,0 +1,34 @@
+.soc {
+  display: flex;
+}
+.soc__link {
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+  &:hover,
+  &:focus {
+    background-color: var(--active-link-color);
+    color: #ffffff;
+  }
+}
+.soc__item + .soc__item {
+  margin-left: 10px;
+}
+.soc__icon {
+  fill: currentColor;
+}
+.our-team__soc {
+  justify-content: center;
+}
+.soc__link--dark {
+  color: #afb1b8;
+}
+.soc__link--light {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
