@@ -1,12 +1,36 @@
 .header {
   border-bottom: 1px solid #ececec;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  @include desktop {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
 }
 .header .container {
   display: flex;
   align-items: center;
 }
 .logo--margin {
-  margin-right: 93px;
+  margin-right: auto;
+  @include tablet {
+    margin-right: 88px;
+  }
+  @include desktop {
+    margin-right: 93px;
+  }
+}
+.header__btn {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  display: flex;
+
+  &:hover,
+  &:focus {
+    fill: var(--active-link-color);
+  }
+  @include tablet {
+    display: none;
+  }
 }

@@ -44,7 +44,7 @@
         <ul class="contact list">
           <li class="contact__item">
             <a href="mailto:info@devstudio.com" class="contact__link link">
-              <svg class="contact__icon" width="16" height="12">
+              <svg class="contact__icon mail--size" width="14" height="10">
                 <use href="./images/icons.svg#icon-envelope "></use>
               </svg>
               info@devstudio.com</a
@@ -52,13 +52,94 @@
           </li>
           <li class="contact__item">
             <a href="tel:+380961111111" class="contact__link link">
-              <svg class="contact__icon" width="10" height="16">
+              <svg class="contact__icon mobile--size" width="10" height="14">
                 <use href="./images/icons.svg#icon-smartphone"></use>
               </svg>
               +38 096 111 11 11</a
             >
           </li>
         </ul>
+        <button type="button" class="header__btn" data-menu-open>
+          <svg class="menu__icon" width="40" height="40">
+            <use href="./images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+        <div class="menu is-hidden" data-menu>
+          <div class="container">
+            <button type="button" class="menu-close" data-menu-close>
+              <svg class="menu-close__icon" width="40" height="40">
+                <use href="./images/icons.svg#icon-mob-menu-close"></use>
+              </svg>
+            </button>
+            <div class="menu__top">
+              <nav class="menu-nav">
+                <ul class="menu-nav__list list">
+                  <li class="menu-nav__item">
+                    <a href="./index.html" class="menu-nav__link menu__selected-page link"
+                      >Студия</a
+                    >
+                  </li>
+                  <li class="menu-nav__item">
+                    <a href="./portfolio.html" class="menu-nav__link link">Портфолио</a>
+                  </li>
+                  <li class="menu-nav__item">
+                    <a href="" class="menu-nav__link link">Контакты</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="menu__bottom">
+              <ul class="menu-contact__list list">
+                <li class="menu-contact__item">
+                  <a href="mailto:info@devstudio.com" class="menu-contact__link link">
+                    info@devstudio.com</a
+                  >
+                </li>
+                <li class="menu-contact__item">
+                  <a href="tel:+380961111111" class="menu-contact__link link"> +38 096 111 11 11</a>
+                </li>
+              </ul>
+              <ul class="menu-soc__list list">
+                <li class="menu-soc__item">
+                  <a
+                    href=""
+                    class="menu-soc__link link"
+                    rel="noopener nofollow noreferrer"
+                    target="_blank"
+                    >Instagram</a
+                  >
+                </li>
+                <li class="menu-soc__item">
+                  <a
+                    href=""
+                    class="menu-soc__link link"
+                    rel="noopener nofollow noreferrer"
+                    target="_blank"
+                    >Twitter</a
+                  >
+                </li>
+                <li class="menu-soc__item">
+                  <a
+                    href=""
+                    class="menu-soc__link link"
+                    rel="noopener nofollow noreferrer"
+                    target="_blank"
+                    >Facebook</a
+                  >
+                </li>
+                <li class="menu-soc__item">
+                  <a
+                    href=""
+                    class="menu-soc__link link"
+                    rel="noopener nofollow noreferrer"
+                    target="_blank"
+                    >Facebook</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
     <main class="main">
@@ -123,15 +204,39 @@
           <h2 class="what-we-do__title">Чем мы занимаемся</h2>
           <ul class="what-we-do__list list">
             <li class="what-we-do__item">
-              <img src="./images/what-we-do-1.jpg" alt="чем мы занимаемся 1" width="370" />
+              <img
+                srcset="
+                  ./images/what-we-do/what-we-do-1.jpg   1x,
+                  ./images/what-we-do/what-we-do-1@2.jpg 2x
+                "
+                src="./images/what-we-do/what-we-do-1.jpg"
+                alt="чем мы занимаемся 1"
+                width="370"
+              />
               <p class="what-we-do__text">Десктопные приложения</p>
             </li>
             <li class="what-we-do__item">
-              <img src="./images/what-we-do-2.jpg" alt="чем мы занимаемся 2" width="370" />
+              <img
+                srcset="
+                  ./images/what-we-do/what-we-do-2.jpg   1x,
+                  ./images/what-we-do/what-we-do-2@2.jpg 2x
+                "
+                src="./images/what-we-do/what-we-do-2.jpg"
+                alt="чем мы занимаемся 2"
+                width="370"
+              />
               <p class="what-we-do__text">Мобильные приложения</p>
             </li>
             <li class="what-we-do__item">
-              <img src="./images/what-we-do-3.jpg" alt="чем мы занимаемся 3" width="370" />
+              <img
+                srcset="
+                  ./images/what-we-do/what-we-do-3.jpg   1x,
+                  ./images/what-we-do/what-we-do-3@2.jpg 2x
+                "
+                src="./images/what-we-do/what-we-do-3.jpg"
+                alt="чем мы занимаемся 3"
+                width="370"
+              />
               <p class="what-we-do__text">Дизайнерские решения</p>
             </li>
           </ul>
@@ -142,7 +247,33 @@
           <h2 class="our-team__title">Наша команда</h2>
           <ul class="our-team__list list">
             <li class="our-team__item">
-              <img src="./images/product-designer.jpg" alt="Фото Игорь демяненко" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/our-team/desktop/product-designer-desk.jpg   1x,
+                    ./images/our-team/desktop/product-designer-desk@2.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team/tablet/product-designer-tab.jpg   1x,
+                    ./images/our-team/tablet/product-designer-tab@2.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team/mob/product-designer-mob.jpg   1x,
+                    ./images/our-team/mob/product-designer-mob@2.jpg 2x
+                  "
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="./images/our-team/desktop/product-designer.jpg"
+                  alt="Фото Игорь Демяненко"
+                />
+              </picture>
               <div class="our-team__wrap">
                 <h3 class="our-team__member">Игорь Демьяненко</h3>
                 <p lang="en" class="our-team__position">Product Designer</p>
@@ -198,9 +329,34 @@
                 </ul>
               </div>
             </li>
-
             <li class="our-team__item">
-              <img src="./images/frontend-developer.jpg" alt="Фото Ольга Репина" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/our-team/desktop/frontend-developer-desk.jpg   1x,
+                    ./images/our-team/desktop/frontend-developer-desk@2.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team/tablet/frontend-developer-tab.jpg   1x,
+                    ./images/our-team/tablet/frontend-developer-tab@2.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team/mob/frontend-developer-mob.jpg   1x,
+                    ./images/our-team/mob/frontend-developer-mob@2.jpg 2x
+                  "
+                  media="(max-width:767px)"
+                />
+                <img
+                  src="./images/our-team/desktop/frontend-developer.jpg"
+                  alt="Фото Ольга Репина"
+                />
+              </picture>
               <div class="our-team__wrap">
                 <h3 class="our-team__member">Ольга Репина</h3>
                 <p lang="en" class="our-team__position">Frontend Developer</p>
@@ -257,7 +413,30 @@
               </div>
             </li>
             <li class="our-team__item">
-              <img src="./images/marketing.jpg" alt="Фото Николай Тарасов" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/our-team/desktop/marketing-desk.jpg   1x,
+                    ./images/our-team/desktop/marketing-desk@2.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team/tablet/marketing-tab.jpg   1x,
+                    ./images/our-team/tablet/marketing-tab@2.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team/mob/marketing-mob.jpg   1x,
+                    ./images/our-team/mob/marketing-mob@2.jpg 2x
+                  "
+                  media="(max-width:767px)"
+                />
+                <img src="./images/our-team/desktop/marketing.jpg" alt="Фото Ольга Репина" />
+              </picture>
               <div class="our-team__wrap">
                 <h3 class="our-team__member">Николай Тарасов</h3>
                 <p lang="en" class="our-team__position">Marketing</p>
@@ -314,7 +493,30 @@
               </div>
             </li>
             <li class="our-team__item">
-              <img src="./images/ui-designer.jpg" alt="Фото Михаил Ермаков" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/our-team/desktop/ui-designer-desk.jpg   1x,
+                    ./images/our-team/desktop/ui-designer-desk@2.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team/tablet/ui-designer-tab.jpg   1x,
+                    ./images/our-team/tablet/ui-designer-tab@2.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/our-team/mob/ui-designer-mob.jpg   1x,
+                    ./images/our-team/mob/ui-designer-mob@2.jpg 2x
+                  "
+                  media="(max-width:767px)"
+                />
+                <img src="./images/our-team/desktop/ui-designer.jpg" alt="Фото Михаил Ермаков" />
+              </picture>
               <div class="our-team__wrap">
                 <h3 class="our-team__member">Михаил Ермаков</h3>
                 <p lang="en" class="our-team__position">UI Designer</p>
@@ -617,14 +819,16 @@
               required
               class="checkbox visually-hidden"
             />
-            <label for="input-check" class="checkbox__text"
+            <label for="input-check" class="checkbox__wrap"
               ><span
                 ><svg class="checkbox__icon" width="11" height="8">
                   <use href="./images/icons.svg#icon-check"></use>
                 </svg>
               </span>
-              Соглашаюсь с рассылкой и принимаю &nbsp;
-              <a href="" class="checkbox__link">Условия договора</a>
+              <p class="checkbok__text">
+                Соглашаюсь с рассылкой и принимаю &nbsp;
+                <a href="" class="checkbox__link">Условия договора</a>
+              </p>
             </label>
           </div>
           <button type="submit" class="modal__sumbit">Отправить</button>
@@ -632,6 +836,7 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
     <script src="./js/tel-mask.js"></script>
   </body>
 </html>

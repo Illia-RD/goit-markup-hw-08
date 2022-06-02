@@ -1,11 +1,19 @@
 .portfolio-filter {
-  justify-content: center;
   display: flex;
-  margin-bottom: var(--tipical-margin-1);
+  @include tablet {
+    justify-content: center;
+  }
+  gap: 15px 8px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  @include tablet {
+    margin-bottom: 14px;
+  }
+  @include desktop {
+    margin-bottom: 34px;
+  }
 }
-.portfolio-filter-item:not(:last-child) {
-  margin-right: 8px;
-}
+
 .portfolio-btn {
   background: #f5f4fa;
 

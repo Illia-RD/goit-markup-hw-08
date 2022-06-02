@@ -1,0 +1,119 @@
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 40px;
+  transition: opacity 250ms, visibility 250ms;
+  z-index: 2;
+  .container {
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    height: 100%;
+    align-items: start;
+    justify-content: space-between;
+    overflow-y: auto;
+  }
+}
+.menu-close {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  &:hover .menu-close__icon,
+  &:focus .menu-close__icon {
+    fill: var(--active-link-color);
+  }
+}
+
+.menu-nav__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+.menu-nav__link {
+  font-size: calc(24px + (16 + 16 * 1) * ((100vw - 280px) / 480));
+  @include mobile {
+    font-size: 40px;
+  }
+  font-weight: 500;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: inherit;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+  &:hover,
+  &:focus {
+    color: var(--active-link-color);
+  }
+}
+.menu__selected-page {
+  color: var(--selected-page-color);
+}
+.menu-contact__item {
+  display: block;
+  margin-bottom: 64px;
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+  &:first-child {
+    .menu-contact__link {
+      font-size: calc(17px + (17 + 17 * 1) * ((100vw - 280px) / 480));
+      @include mobile {
+        font-size: 34px;
+      }
+      line-height: 1.17;
+    }
+  }
+  &:last-child {
+    .menu-contact__link {
+      font-size: calc(12px + (12 + 12 * 1) * ((100vw - 280px) / 480));
+      @include mobile {
+        font-size: 24px;
+      }
+      line-height: 1.16;
+    }
+  }
+}
+.menu-contact__link {
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--main-color);
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+  &:hover,
+  &:focus {
+    color: var(--active-link-color);
+  }
+}
+.menu-soc__list {
+  display: flex;
+}
+.menu-soc__item {
+  &:not(:first-child) {
+    margin-left: 10px;
+    &::before {
+      content: '';
+      width: 22px;
+      height: 0px;
+      border-right: 1px solid rgba(33, 33, 33, 0.2);
+
+      transform: rotate(90deg);
+      margin-right: 9px;
+    }
+  }
+}
+
+.menu-soc__link {
+  font-weight: 500;
+  font-size: calc(8px + (10 + 10 * 1) * ((100vw - 280px) / 480));
+  @include mobile {
+    font-size: 18px;
+  }
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #2196f3;
+}
