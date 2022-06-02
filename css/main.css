@@ -1121,12 +1121,12 @@ body {
 }
 @media screen and (min-width: 768px) {
   .portfolio-filter {
-    margin-bottom: 14px;
+    margin-bottom: var(--tipical-margin-2);
   }
 }
 @media screen and (min-width: 1200px) {
   .portfolio-filter {
-    margin-bottom: 34px;
+    margin-bottom: var(--tipical-margin-1);
   }
 }
 
@@ -1206,6 +1206,17 @@ body {
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
+}
+
+@media screen and (min-width: 768px) {
+  .tabl-padding {
+    padding-bottom: 55px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .tabl-padding {
+    padding-bottom: 19px;
+  }
 }
 
 .portfolio-item-text {

@@ -50,7 +50,14 @@
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
 }
-
+.tabl-padding {
+  @include tablet {
+    padding-bottom: 55px;
+  }
+  @include desktop {
+    padding-bottom: 19px;
+  }
+}
 .portfolio-item-text {
   background: rgba(33, 150, 243, 0.9);
   font-size: 18px;
